@@ -3,13 +3,14 @@ i=2
 while i>0
   puts i
   #i--  i++ not use instead
+  # ✔ Runs while the condition is true.
   i-=1
 end
 
 puts "until loop"
 k = 1
 
-
+#  Runs until the condition becomes true.
 
 until k>6
   puts k
@@ -32,4 +33,27 @@ end
 puts "times loop"
 
 5.times { puts "great"}
-# 
+#  More readable than while.
+
+
+
+
+# about controls
+# 1️⃣ break → Stops the loop
+
+# 2️⃣ next → Skips the current iteration
+    (1..5).each do |num|
+      next if num == 3
+      puts num
+    end
+
+# 3️⃣ redo → Repeats the same iteration
+    i = 0
+    while i < 3
+      puts "Iteration #{i}"
+      i += 1
+      redo if i == 2  # Repeats when i is 2
+    end
+
+
+
