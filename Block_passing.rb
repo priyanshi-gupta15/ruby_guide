@@ -4,6 +4,24 @@
  # Using yield
  #  If a method is given a block, yield executes it inside the method.
 
+# A method can accept a block (anonymous function) using yield:
+
+def repeat_twice
+  yield
+  yield   #yield calls the block passed during method execution.
+end
+
+repeat_twice { puts "Hello!" }
+
+
+
+def double
+  yield 4
+end
+
+double { |num| puts num * 2 }  # Output: 4
+
+
 
 def greet
   puts "Before block execution"
