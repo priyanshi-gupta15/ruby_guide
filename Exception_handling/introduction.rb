@@ -40,7 +40,7 @@ end
 # 🔹 ensure always runs (e.g., for closing files).
 
 
-# Raising Exceptions
+# Raising Exceptions // custom exception
 # You can manually raise exceptions using raise.
 
 def check_age(age)
@@ -69,7 +69,48 @@ begin
 rescue MyCustomError => e
   puts "Caught a custom exception: #{e.message}"
 end
-Output:
+# Output:
 
 
 # Caught a custom exception: Something went wrong!
+
+
+
+# 🔹  ensure: Always runs (Cleanup Code)
+# The ensure block always runs, whether an exception occurs or not.
+# This is useful for cleaning up resources (like closing files or releasing memory).
+
+
+begin
+  file = File.open("data.json")
+  puts "reding a file"
+rescue
+  puts "File not found!"
+ensure
+  puts "Closing file..."
+  file.close if file
+end
+
+
+
+
+# ✅ Good Practice (Using Logger)
+
+require 'logger'
+
+logger = Logger.new("error.log")  # ✅ Save logs to a file
+
+begin
+  num = 10 / 0
+rescue ZeroDivisionError => e
+  logger.error("ZeroDivisionError: #{e.message}")  # ✅ Log the error
+  puts "An error occurred. Check the log file for details."
+end
+
+
+# 📌  Best Practices in Exception Handling
+# ✔ Handle only expected exceptions. Avoid generic rescue (it hides real bugs).
+# ✔ Use ensure to clean up resources (closing files, releasing memory).
+# ✔ Log errors instead of just printing them (logger.error).
+# ✔ Raise meaningful exceptions (raise ArgumentError, "Invalid input")
+# ✔ Avoid swallowing errors silently. Always log or display a message.
