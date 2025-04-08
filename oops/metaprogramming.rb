@@ -151,3 +151,58 @@ a.bark  # ✅ Output: The animal makes a bark sound!
 a.meow  # ✅ Output: The animal makes a meow sound!
 a.roar  # ✅ Output: The animal makes a roar sound!
 a.fly   # ❌ Raises: NoMethodError: Undefined method 'fly' for Animal. Allowed methods: bark, meow, roar
+
+
+
+
+
+
+# ============================================
+# Introspection: Checking Object Properties at Runtime
+# Ruby allows checking whether an object supports a method before calling it.
+
+
+class Car
+  def drive
+    puts "Driving..."
+  end
+end
+
+car = Car.new
+puts car.respond_to?(:drive)  # Output: true
+puts car.respond_to?(:fly)    # Output: false
+
+
+
+#  Singleton Classes and Eigenclasses
+# Every Ruby object has a hidden singleton class where unique methods can be added.
+
+# Example: Defining a Singleton Method
+dog = "Buddy"
+
+def dog.speak
+  puts "Woof! I'm #{self}."
+end
+
+dog.speak  # Output: Woof! I'm Buddy.
+# 🔹 Why use singleton methods?
+
+# Add methods to one specific object
+# Used in class-level methods (like self.method_name)
+
+class Cat
+  class << self
+    def species
+      "Feline"
+    end
+  end
+end
+
+puts Cat.species  # Output: Feline
+# 🔹 Why use eigenclasses?
+
+# Define class methods
+
+# Modify a class without affecting other instances
+
+

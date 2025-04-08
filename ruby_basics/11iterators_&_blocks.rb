@@ -1,5 +1,15 @@
 # 🔹 Blocks (do |var| ... end)
 
+
+# each: Loop through elements.
+# map: Transform elements.
+# select: Filter elements.
+# reject: Exclude elements.
+# find: Find the first matching element.
+# reduce: Aggregate values.
+# Enumerators: Enable manual iteration and lazy evaluation.
+
+
 3.times do |i|
   puts "Hello #{i}"
 end
