@@ -56,4 +56,9 @@ str = "Hello world"
 
 
 
+ arr1 = [1,2,3,4,5,6]
+ puts  arr1.partition { |n| n.even? }.inspect
+
+ 
+
 

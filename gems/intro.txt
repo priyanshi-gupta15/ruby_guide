@@ -1,0 +1,84 @@
+RubyGems is a package manager for the Ruby programming language. It provides a standard format for distributing Ruby programs and libraries, known as "gems". Gems are self-contained packages that include Ruby code, documentation, and metadata.
+
+With RubyGems, developers can easily install, update, and manage libraries and dependencies for their Ruby projects. It simplifies the process of sharing and using reusable code within the Ruby ecosystem.
+
+Key commands for working with RubyGems:
+- `gem install <gem_name>`: Installs a gem.
+- `gem update <gem_name>`: Updates an installed gem.
+- `gem uninstall <gem_name>`: Removes a gem.
+- `gem list`: Lists all installed gems.
+
+RubyGems also integrates with Bundler, a tool for managing gem dependencies in a project. By using a `Gemfile`, developers can specify the gems their project depends on, ensuring consistent environments across different systems.
+
+RubyGems.org is the central repository where developers can publish and share their gems with the community.
+
+
+A Gem is a package/library that contains reusable Ruby code you can use in your project.
+
+Think of it like an "app" or "plugin" that you can add to your Ruby program to give it new powers — like authentication, sending emails, connecting to databases, etc.
+
+🔍 Why Use Gems?
+Instead of writing everything from scratch, gems let you:
+
+✅ Reuse code written by others
+✅ Speed up development
+✅ Follow best practices
+✅ Keep your code clean and organized
+
+⚙️ How Gems Work in Ruby
+Each gem contains:
+
+Ruby files (.rb)
+
+A gemspec file (metadata like name, version, dependencies)
+
+Optional assets or binaries (images, HTML, CLI, etc.)
+
+When installed, gems are stored in your system and can be reused in multiple projects.
+
+📦 Gem Examples You’ll Use Often
+Gem Name	Purpose
+rails	Framework for web apps
+pg	PostgreSQL support
+nokogiri	HTML/XML parsing (for web scraping)
+devise	User authentication
+faker	Generate fake data for testing
+byebug	Debugging tool for Ruby
+
+
+Use a Gem in Your Script
+After installing a gem, include it in your Ruby file:
+
+`require 'nokogiri'`
+
+📌Managing Gems with Bundler (in Projects)
+Instead of installing manually every time, Ruby projects use a Gemfile.
+
+📌 Example Gemfile:
+source "https://rubygems.org"
+
+gem 'rails'
+gem 'pg'
+gem 'devise'
+gem 'faker'
+
+
+📦 Install all gems listed in the Gemfile:
+
+`bundle install`
+
+
+💡 What is Bundler?
+Bundler is a gem that:
+Manages all the gems your app needs
+Keeps track of gem versions (so your app doesn’t break!)
+Helps install everything with bundle install
+
+
+🗂️ Where Are Gems Stored?
+Globally installed gems are stored in:
+
+~/.rbenv/versions/x.x.x/lib/ruby/gems/...
+Or:
+
+~/.rvm/gems/ruby-x.x.x/
