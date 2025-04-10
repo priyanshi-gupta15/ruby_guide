@@ -82,3 +82,15 @@ Globally installed gems are stored in:
 Or:
 
 ~/.rvm/gems/ruby-x.x.x/
+
+
+💎 What is a Custom Ruby Gem?
+A gem is just a packaged Ruby library that others (or you) can install and reuse in different projects.
+You can create your own gem to:
+
+Organize your code
+
+Reuse logic in multiple apps
+
+Share with others (or publish to RubyGems.org)
+

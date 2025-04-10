@@ -1,0 +1,68 @@
+ step by step process to make custom gem
+
+ ✅ 1. Install Bundler (if not already)
+
+ `bash
+ gem install bundler`
+
+ ✅ 2. Create Your Gem Skeleton
+ Use bundler to generate the gem structure:
+
+ bash
+ `bundle gem hello_gem`
+ You'll be asked a few questions like:
+
+ Do you want to add a license? → say yes
+
+ Use RSpec for tests? → for now, say no to keep it simple
+
+This will create a folder like:
+
+ bash
+
+ hello_gem/
+ ├── hello_gem.gemspec
+ ├── Gemfile
+ ├── Rakefile
+ ├── lib/
+ │   ├── hello_gem.rb
+ │   └── hello_gem/version.rb
+ └── ...
+
+✅ 3. Add Your Code
+Open lib/hello_gem.rb and write your code:
+
+ruby
+`# lib/hello_gem.rb
+
+require_relative "hello_gem/version"
+
+module HelloGem
+  #{def self.greet(name = #"friend")
+  #  "Hello, #{name.capitalize}#!"
+  #end}
+
+  # write your code here
+end`
+
+✅ 4. Build Your Gem
+Run this in the gem's folder:
+
+bash
+
+`gem build hello_gem.gemspec`
+
+It will create a .gem file, like:
+
+`hello_gem-0.1.0.gem`
+
+
+✅ 5. Install Your Custom Gem Locally
+
+bash
+gem install ./hello_gem-0.1.0.gem
+Now test it in irb or a Ruby file:
+
+ruby
+require 'hello_gem'
+puts HelloGem.greet("user")  # => "Hello, User!"
