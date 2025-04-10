@@ -19,3 +19,5 @@ result1 = ["hi", "hello", "world", "go", "yo"].group_by(&:length)
 result1.each do |length, words|
   puts "Length #{length}: #{words.join(', ')}"
 end
+
+# /

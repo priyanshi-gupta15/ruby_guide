@@ -1,0 +1,17 @@
+# Ignore log files and temporary files
+*.log
+*.tmp
+*.swp
+
+# Ignore editor/project files
+.DS_Store
+.idea/
+.vscode/
+
+# Ignore build artifacts
+pkg/
+*.gem
+
+# Ignore credentials or local configs
+.env
+config/secrets.yml
