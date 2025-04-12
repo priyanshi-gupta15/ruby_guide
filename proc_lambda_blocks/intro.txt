@@ -1,0 +1,20 @@
+
+🧱 What Are They?
+Type  	Reusable?	   Return Behavior	                  Syntax
+Block	  No	         Returns from caller                method	do...end or {}
+Proc	  Yes	         Returns from calling method	      Proc.new
+Lambda	Yes	         Returns from lambda itself	        -> or lambda
+
+
+🎯 Let’s understand with a real-life example:
+🍔 Imagine:
+You go to a restaurant, and the waiter says:
+
+🔹 Block: “Tell me once what you want to eat now.” (only temporary)
+
+🔹 Proc: “Give me your saved favorite meal anytime.” (saved for later)
+
+🔹 Lambda: “Give me your saved favorite meal, but if there's a mistake in the order, I’ll tell the chef — not run away!” (stricter)
+
+
+

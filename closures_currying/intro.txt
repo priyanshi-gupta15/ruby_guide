@@ -1,0 +1,11 @@
+ Closures and Currying in Ruby
+These are powerful functional programming tools in Ruby that take Procs and Lambdas to the next level. Understanding them helps you write flexible, elegant, and highly reusable code — a must for Rails and real-world Ruby.
+
+What is a Closure in Ruby?
+A closure is a block of code (like a proc/lambda) that remembers the variables from the scope it was defined in — even if that scope is gone.
+
+
+✅ Summary:
+Concept 	Key Idea
+Closure 	Function remembers outer variables
+Currying	Function receives args one-by-one
